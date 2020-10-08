@@ -5,6 +5,7 @@ require("dotenv").config();
 // Create a new express app instance
 const app: express.Application = express();
 const passport = require("passport");
+const jwt = require("jsonwebtoken");
 const {pool} = require("./dbConfig");
 const initializePassport = require("./passportConfig");
 const bcrypt = require("bcrypt");
@@ -37,7 +38,7 @@ app.use(errorMiddleware);
 
 app.get("/users/logout", (req, res) => {
   //req.logout();
-  res.render("index", { message: "You have logged out successfully" });
+  res.render("login", { message: "You have logged out successfully" });
 });
 
 //Veri tabanına Kayıt Eklemek
@@ -122,7 +123,8 @@ app.post("/users/login",passport.authenticate("local",{
   successRedirect: "/users/dashboard",
   failureRedirect: "/users/login",
   failureFlash: true
-}))
+}));
+
 
 function checkAuthenticated(req, res, next) {
   console.log(req.isAuthenticated());
