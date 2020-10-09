@@ -1,7 +1,6 @@
 FROM node:10
-WORKDIR /app
-COPY package.json /app
+WORKDIR /usr/src/app
+COPY NodeJSCalismalar /usr/src/app
 RUN npm install
-COPY . /appr
 CMD npm run start
 EXPOSE 3000
