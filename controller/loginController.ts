@@ -1,5 +1,6 @@
 
-module.exports.login_get = function(req,res){
+
+module.exports.login_get = (req,res)=>{
     // passport error mesajı üretir.
     console.log(req.session.flash.error);
     res.render("login.ejs");

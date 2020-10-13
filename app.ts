@@ -7,7 +7,7 @@ const starter = new server().start(port)
   .then(port => console.log(`Server Çalışıyor... port= ${port}`))
   .catch(error => {
     console.log(error)
-  });
+});
 
 
 export default starter;
