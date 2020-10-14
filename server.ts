@@ -54,12 +54,14 @@ class Server {
 
         this.app.get("/users/dashboard", checkNotAuthenticated, (req, res) => {
           console.log(req.isAuthenticated());
-          res.render("dashboard", { user: req.user.name });
+          res.json({ msg: `Hoşgeldin ${req.user.name}!` });
+          //res.render("dashboard", { user: req.user.name });
         });
 
         this.app.get("/users/logout", (req, res) => {
           req.logout();
-          res.render("login", { message: "Başarıyla Çıkış Yapıldı!" });
+          res.json({ message: "Başarıyla Çıkış Yapıldı!" });
+          //res.render("login", { message: "Başarıyla Çıkış Yapıldı!" });
         });
 
       function checkNotAuthenticated(req, res, next) {
