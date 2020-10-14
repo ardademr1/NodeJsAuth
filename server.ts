@@ -2,13 +2,12 @@
 import bodyParser from 'body-parser';
 const {pool} = require("./dbConfig");
 import express from 'express';
-const app = express();
-const passport = require("passport");
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+import passport from 'passport';
+import jwt from 'jsonwebtoken';
+import bcrypt from 'bcrypt';
 import errorMiddleware from './middleware/error.middleware';
-const flash = require("express-flash");
-const session = require("express-session");
+import flash from 'express-flash';
+import session from 'express-session';
 const initializePassport = require("./passportConfig");
 
 initializePassport(passport);
