@@ -4,19 +4,13 @@ let ctrlLogin = require('../controller/loginController');
 
 import bodyParser from 'body-parser';
 const {pool} = require("../dbConfig");
-const express = require("express");
 const passport = require("passport");
 const bcrypt = require("bcrypt");
 const flash = require("express-flash");
 const session = require("express-session");
-const initializePassport = require("../passportConfig");
 
-router2.use(bodyParser.urlencoded({ extended:true }));
-        router2.use(bodyParser.json({ limit: '1mb' })); // 100kb varsayılan
-        router2.use(express.json());
         router2.use(passport.initialize());
         router2.use(passport.session());
-        router2.use(express.urlencoded({extended: false}));
 
 /*router2.route("/login",checkAuthenticated)
       .get(ctrlLogin.login_get);*/
