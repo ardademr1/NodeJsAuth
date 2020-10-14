@@ -1,7 +1,7 @@
 
 import bodyParser from 'body-parser';
 const {pool} = require("./dbConfig");
-const express = require("express");
+import express from 'express';
 const app = express();
 const passport = require("passport");
 const jwt = require("jsonwebtoken");
