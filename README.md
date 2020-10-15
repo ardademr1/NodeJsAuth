@@ -58,14 +58,19 @@
     id | name | email | password
    ----+------+-------+-----------
    ```
-   
 3. **Start developing.**
 
    ```sh
    # "start": "nodemon app.ts",
    npm run start
    ```
-4. **Open the source code and start editing!**
+4. **Start developing.**
+
+   ```sh
+   # "start": "nodemon app.ts",
+   npm run start
+   ```
+5. **Open the source code and start editing!**
 
    Your site is now running at `http://localhost:3000`!
    <br>Pages:
@@ -74,6 +79,11 @@
    `http://localhost:3000/users/dashboard`
 
 
-   Console: `Server Çalışıyor... port= 3000`
+   Console:
+   ```sh
+   Initialized
+   Server Çalışıyor... port= 3000
+   Veri Tabanına Bağlanıldı.
+   ```
 
 Docker-PostgreSQL-NodeJS-Express-TypeScript
