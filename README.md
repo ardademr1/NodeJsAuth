@@ -14,8 +14,26 @@
    $ docker pull postgres:alpine
    ```
    ```sh
-   # start a postgres >>
+   # 1-start a postgres >>
    $ docker run --name postgres-0 -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 postgres:alpine
+   ```
+   ```sh
+   # 2-get inside container >>
+   $ docker exec -it postgres-0 bash
+   ```
+   ```sh
+   # 3-start a postgres >>
+   $ docker exec -it postgres-0 psql -U postgres
+   ```
+   ```sh
+   # 4-create database user >>
+   postgres=# CREATE USER arda WITH PASSWORD 'password' CREATEDB
+   
+                                       List of roles
+    Role name |                         Attributes                         | Member of
+   -----------+------------------------------------------------------------+-----------
+    arda      | Create DB                                                  | {}
+    postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
    ```
    
 3. **Start developing.**
