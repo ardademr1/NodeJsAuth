@@ -34,6 +34,29 @@
    -----------+------------------------------------------------------------+-----------
     arda      | Create DB                                                  | {}
     postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+   
+   postgres=# \q
+   ```
+   ```sh
+   # 5-connect to psql with user (arda) >>
+   $ docker exec -it postgres-0 psql -U arda -d postgres
+   ```
+   ```sh
+   # 6-create db >>
+   postgres=> CREATE DATABASE nodelogin
+   ```
+   ```sh
+   # 7-create table >>
+   nodelogin(> (id BIGSERIALPRI
+   nodelogin=> CREATE TABLE users
+   nodelogin-> (id BIGSERIAL PRIMARY KEY NOT NULL,
+   nodelogin(> name VARCHAR(200) NOT NULL,
+   nodelogin(> email VARCHAR(200) NOT NULL,
+   nodelogin(> password VARCHAR(200) NOT NULL,
+   nodelogin(> UNIQUE (email));
+   
+    id | name | email | password
+   ----+------+-------+-----------
    ```
    
 3. **Start developing.**
