@@ -18,11 +18,11 @@
 
    Your site is now running at `http://localhost:3000`!
    Pages:
-   `http://localhost:3000/users/login`
+   `http://localhost:3000/users/login`\r
    `http://localhost:3000/users/register`
    `http://localhost:3000/users/dashboard`
 
 
-   `Server Çalışıyor... port= 3000`
+   Console: `Server Çalışıyor... port= 3000`
 
 Docker-PostgreSQL-NodeJS-Express-TypeScript
