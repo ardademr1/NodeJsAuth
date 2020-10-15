@@ -5,7 +5,7 @@
 
    ```sh
    # install the dependencies
-   npm install bcrypt dotenv ejs express express-flash express-session passport passport-local pg postgres
+   npm install 
    ```
 
 1. **Start developing.**
