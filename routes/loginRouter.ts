@@ -16,6 +16,7 @@ const session = require("express-session");
       .get(ctrlLogin.login_get);*/
 router2.get("/login",checkAuthenticated,(req,res)=>{
         console.log(req.session.flash.error);
+        //res.json({ message: "Lütfen Giriş Yapın" });
         res.render("login.ejs");
       });
 

@@ -4,9 +4,7 @@
   "description": "ilk npm projem",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon app.ts",
-    "initdb": "node tools/initdb.js",
+    "start": "nodemon app.ts",
     "tsc": "tsc"
   },
   "keywords": [

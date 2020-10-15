@@ -1,4 +1,5 @@
 import server from './server';
+import config from './config';
 
 const port = parseInt(process.env.PORT || '3000');
 
