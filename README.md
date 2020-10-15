@@ -18,8 +18,8 @@
 
    Your site is now running at `http://localhost:3000`!
    Pages:
-   `http://localhost:3000/users/login`\r
-   `http://localhost:3000/users/register`
+   `http://localhost:3000/users/login`<br>
+   `http://localhost:3000/users/register`<br>
    `http://localhost:3000/users/dashboard`
 
 
