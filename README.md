@@ -17,7 +17,7 @@
 1. **Open the source code and start editing!**
 
    Your site is now running at `http://localhost:3000`!
-   Pages:
+   <br>Pages:
    `http://localhost:3000/users/login`<br>
    `http://localhost:3000/users/register`<br>
    `http://localhost:3000/users/dashboard`
