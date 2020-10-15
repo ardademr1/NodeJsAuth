@@ -8,13 +8,13 @@
    npm install 
    ```
 
-1. **Start developing.**
+2. **Start developing.**
 
    ```sh
    # "dev": "nodemon app.ts",
    npm run dev
    ```
-1. **Open the source code and start editing!**
+3. **Open the source code and start editing!**
 
    Your site is now running at `http://localhost:3000`!
    <br>Pages:
