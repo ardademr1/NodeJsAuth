@@ -14,7 +14,7 @@
    $ docker pull postgres:alpine
    ```
    ```sh
-   # start a postgres instance >>
+   # start a postgres >>
    $ docker run --name postgres-0 -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 postgres:alpine
    ```
    
