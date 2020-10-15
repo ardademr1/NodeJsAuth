@@ -14,8 +14,14 @@
    # "dev": "nodemon app.ts",
    npm run dev
    ```
-PORT=3000
+1. **Open the source code and start editing!**
 
-Server Çalışıyor... port= 3000
+   Your site is now running at `http://localhost:3000`!
+   `http://localhost:3000/users/login`
+   `http://localhost:3000/users/register`
+   `http://localhost:3000/users/dashboard`
+
+
+   `Server Çalışıyor... port= 3000`
 
 Docker-PostgreSQL-NodeJS-Express-TypeScript
