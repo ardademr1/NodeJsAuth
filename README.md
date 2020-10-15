@@ -47,7 +47,6 @@
    ```
    ```sh
    # 7-create table >>
-   nodelogin(> (id BIGSERIALPRI
    nodelogin=> CREATE TABLE users
    nodelogin-> (id BIGSERIAL PRIMARY KEY NOT NULL,
    nodelogin(> name VARCHAR(200) NOT NULL,
