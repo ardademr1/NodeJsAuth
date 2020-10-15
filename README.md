@@ -7,14 +7,16 @@
    # install the dependencies
    npm install 
    ```
+2. **Setup docker and postgres.**
 
-2. **Start developing.**
+   
+3. **Start developing.**
 
    ```sh
-   # "dev": "nodemon app.ts",
-   npm run dev
+   # "start": "nodemon app.ts",
+   npm run start
    ```
-3. **Open the source code and start editing!**
+4. **Open the source code and start editing!**
 
    Your site is now running at `http://localhost:3000`!
    <br>Pages:
