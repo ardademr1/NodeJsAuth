@@ -58,11 +58,16 @@
     id | name | email | password
    ----+------+-------+-----------
    ```
-3. **Start developing.**
+3. **Setup .env and .dockerignore files.**
 
-   ```sh
-   # "start": "nodemon app.ts",
-   npm run start
+   ```# fill up .env file like this;
+      DB_USER= myname
+      DB_PASSWORD= password
+      DB_HOST= 0.0.0.0
+      DB_PORT= 5432
+      DB_DATABASE= nodelogin
+      # fill up .dockerignore file like this;
+      node_modules
    ```
 4. **Start developing.**
 
