@@ -8,7 +8,13 @@
    npm install 
    ```
 2. **Setup docker and postgres.**
-
+   
+   ```sh
+   docker image >> 
+   $ docker pull postgres:alpine
+   
+   $ docker run --name postgres-0 -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 postgres:alpine
+   ```
    
 3. **Start developing.**
 
