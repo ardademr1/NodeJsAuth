@@ -38,8 +38,12 @@
    $ docker exec -it postgres-0 psql -U myname -d postgres
    ```
    ```sh
-   # 6-create db >>
+   # 6-create and connect db >>
    postgres=> CREATE DATABASE nodelogin
+   CREATE DATABASE
+   
+   postgres=>\c nodelogin
+   You are now connected to database "nodelogin" as user "myname".
    ```
    ```sh
    # 7-create table >>
