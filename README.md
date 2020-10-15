@@ -50,6 +50,7 @@
    nodelogin(> password VARCHAR(200) NOT NULL,
    nodelogin(> UNIQUE (email));
    
+   # users table columns >>
     id | name | email | password
    ----+------+-------+-----------
    ```
