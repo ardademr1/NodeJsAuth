@@ -10,10 +10,11 @@
 2. **Setup docker and postgres.**
    
    ```sh
-   docker image >> 
+   # docker image >> 
    $ docker pull postgres:alpine
    ```
    ```sh
+   # start a postgres instance >>
    $ docker run --name postgres-0 -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 postgres:alpine
    ```
    
