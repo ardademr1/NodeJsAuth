@@ -27,19 +27,19 @@
    ```
    ```sh
    # 4-create database user >>
-   postgres=# CREATE USER arda WITH PASSWORD 'password' CREATEDB
+   postgres=# CREATE USER myname WITH PASSWORD 'password' CREATEDB
    
                                        List of roles
     Role name |                         Attributes                         | Member of
    -----------+------------------------------------------------------------+-----------
-    arda      | Create DB                                                  | {}
+    myname    | Create DB                                                  | {}
     postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
    
    postgres=# \q
    ```
    ```sh
-   # 5-connect to psql with user (arda) >>
-   $ docker exec -it postgres-0 psql -U arda -d postgres
+   # 5-connect to psql with user (myname) >>
+   $ docker exec -it postgres-0 psql -U myname -d postgres
    ```
    ```sh
    # 6-create db >>
