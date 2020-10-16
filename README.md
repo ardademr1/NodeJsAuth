@@ -60,7 +60,8 @@
    ```
 3. **Setup .env and .dockerignore files.**
 
-   ```# fill up .env file like this;
+   ```sh
+      # fill up .env file like this;
       DB_USER= myname
       DB_PASSWORD= password
       DB_HOST= 0.0.0.0
