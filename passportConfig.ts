@@ -29,13 +29,11 @@ function initialize(passport) {
                 return done(null, user);
               } else {
                 //password is incorrect
-                console.log("Şifre Hatalı!");
                 return done(null, false, { message: "Password is incorrect" });
               }
             });
           } else {
             // No user
-            console.log("Kullanıcı Bulunamadı!");
             return done(null, false, {
               message: "No user with that email address"
             });

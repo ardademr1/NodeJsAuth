@@ -35,7 +35,8 @@ router.post('/register',async (req,res)=>{
           errors.push({message: "Şifreler Farklı"});
       }
       if(errors.length>0){
-          res.render("register",{errors});
+          //res.render("register",{errors});
+          res.status(400).send({message: 'Kayıt Başarısız.'});
       }else{
           // kayıt olma başarılı
           let hashedPassword = await bcrypt.hash(password, 10);
@@ -65,7 +66,7 @@ router.post('/register',async (req,res)=>{
                         throw err;
                       }
                       console.log(results.rows);
-                      res.json("Kayıt Başarılı");
+                      res.json({message: "Kayıt Başarılı.",token:""});
                       //res.redirect("/users/login");
                     }
                   );

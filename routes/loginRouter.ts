@@ -15,9 +15,9 @@ const session = require("express-session");
 /*router2.route("/login",checkAuthenticated)
       .get(ctrlLogin.login_get);*/
 router2.get("/login",checkAuthenticated,(req,res)=>{
-        console.log(req.session.flash.error);
-        //res.json({ message: "Lütfen Giriş Yapın" });
-        res.render("login.ejs");
+        //console.log(req.session.flash.error);
+        res.json({ error:{},message: "Lütfen Giriş Yapın",token:{} });
+        //res.render("login.ejs");
       });
 
 
@@ -40,7 +40,7 @@ function checkAuthenticated(req, res, next) {
       if (req.isAuthenticated()) {
         return next();
       }
-      res.redirect("/users/login");;
+      res.redirect("/users/login");
     }
 
 module.exports = router2
