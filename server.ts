@@ -8,6 +8,7 @@ import bcrypt from 'bcrypt';
 import errorMiddleware from './middleware/error.middleware';
 import flash from 'express-flash';
 import session from 'express-session';
+import HttpException from "./exceptions/HttpException";
 const initializePassport = require("./passportConfig");
 
 initializePassport(passport);
@@ -53,7 +54,8 @@ class Server {
 
         this.app.get("/users/dashboard", checkNotAuthenticated, (req, res) => {
           console.log(req.isAuthenticated());
-          res.json({ msg: `Hoşgeldin ${req.user.name}!` });
+          res.json({ error: "false",code: 0,message: "Login Successful",token:{},user:{id: req.user.id, isim: req.user.name }});
+          //res.json({ msg: `Hoşgeldin ${req.user.name}!` });
           //res.render("dashboard", { user: req.user.name });
         });
 
@@ -65,9 +67,9 @@ class Server {
 
       function checkNotAuthenticated(req, res, next) {
         if (req.isAuthenticated()) {
-          return next();
+          return next(new HttpException(404, 'Post not found'));
         }
-        res.redirect("/users/login");;
+        res.status(401).send({message: "Yetkisiz Giriş"});
       }
     }
 
