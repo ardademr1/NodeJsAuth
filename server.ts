@@ -54,7 +54,7 @@ class Server {
 
         this.app.get("/users/dashboard", checkNotAuthenticated, (req, res) => {
           console.log(req.isAuthenticated());
-          res.json({ error: "false",code: 0,message: "Login Successful",token:{},user:{id: req.user.id, isim: req.user.name }});
+          res.json({ error: "false",code: req.isAuthenticated(),message: "Login Successful",token:{},user:{id: req.user.id, isim: req.user.name }});
           //res.json({ msg: `Hoşgeldin ${req.user.name}!` });
           //res.render("dashboard", { user: req.user.name });
         });
@@ -67,7 +67,7 @@ class Server {
 
       function checkNotAuthenticated(req, res, next) {
         if (req.isAuthenticated()) {
-          return next(new HttpException(404, 'Post not found'));
+          return next();
         }
         res.status(401).send({message: "Yetkisiz Giriş"});
       }
